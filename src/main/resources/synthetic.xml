@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+-->
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.xebialabs.com/deployit/synthetic"
+           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+    <type type="datapower.Server" extends="udm.BaseContainer">
+         <property name="host"       kind="ci" referenced-type="overthere.Host" as-containment="true" />
+         <property name="domain"     required="true" />
+         <property name="serverUrl"  required="true" />
+         <property name="dpUsername" required="true" />
+         <property name="dpPassword" required="true" password="true" />
+    </type>
+
+   <type type="datapower.File" 
+         extends="udm.BaseDeployedArtifact" 
+         deployable-type="datapower.FileSpec"
+         container-type="datapower.Server" >
+        <generate-deployable type="datapower.FileSpec" extends="udm.BaseDeployableFileArtifact" />
+
+        <property name="fileName"   required="true" />
+        <property name="filePath"   required="true" />
+   </type>
+
+</synthetic>
