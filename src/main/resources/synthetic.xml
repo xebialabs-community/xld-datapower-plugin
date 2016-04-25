@@ -11,9 +11,11 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
     <type type="datapower.Server" extends="udm.BaseContainer">
          <property name="host"       kind="ci" referenced-type="overthere.Host" as-containment="true" />
          <property name="domain"     required="true" />
-         <property name="serverUrl"  required="true" />
-         <property name="dpUsername" required="true" />
-         <property name="dpPassword" required="true" password="true" />
+         <property name="dpHost"       required="true" />
+         <property name="RestPort"   required="true" />
+         <property name="SshPort"    required="true" />
+         <property name="username"   required="true" />
+         <property name="password"   required="true" password="true" />
     </type>
 
    <type type="datapower.File" 
@@ -24,6 +26,15 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
 
         <property name="fileName"   required="true" />
         <property name="filePath"   required="true" />
+   </type>
+
+   <type type="datapower.Script" 
+         extends="udm.BaseDeployedArtifact" 
+         deployable-type="datapower.ScriptSpec"
+         container-type="datapower.Server" >
+        <generate-deployable type="datapower.ScriptSpec" extends="udm.BaseDeployableFileArtifact" />
+
+        <property name="fileName"   required="true" />
    </type>
 
 </synthetic>
