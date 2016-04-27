@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
-FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
 -->
+
+
 <synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
-    <type type="datapower.Server" extends="udm.BaseContainer">
-         <property name="host"       kind="ci" referenced-type="overthere.Host" as-containment="true" />
+    <type type="datapower.Server" extends="overthere.LocalHost">
          <property name="domain"     required="true" />
-         <property name="dpHost"       required="true" />
+         <property name="host"       required="true" />
          <property name="RestPort"   required="true" />
          <property name="SshPort"    required="true" />
          <property name="username"   required="true" />

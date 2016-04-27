@@ -1,8 +1,13 @@
+
+plugins {
+    id "com.github.hierynomus.license" version "0.11.0"
+    id "com.xebialabs.xldp" version "1.0.5"
+}
+
 defaultTasks 'build'
 version = '1.0.0-beta'
 
 import org.apache.tools.ant.filters.*
-apply plugin: "com.github.hierynomus.license"
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
@@ -14,28 +19,19 @@ targetCompatibility = 1.6
 def apiVersion = '5.1.4'
 def xldeployHome = "$System.env.XLDEPLOY_HOME"
 
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath "nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0"
-  }
-}
-
 repositories {
-  mavenLocal()
-  mavenCentral()
-  maven {
-      credentials {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'http://mvnrepository.com/artifact' }
+    maven {
+        credentials {
             username 'community-plugins'
             password 'community'
         }
-      url 'http://nexus.xebialabs.com/nexus/content/repositories/releases'
+        url 'http://nexus.xebialabs.com/nexus/content/repositories/releases'
     }
 }
 
- 
 processResources {
     filter ReplaceTokens, tokens: [
         "project.version": project.property("version"),
@@ -47,4 +43,26 @@ license {
     header rootProject.file('src/main/license/xebialabs_community.license')
     strictCheck false
 }
+
+
+configurations {
+    distBundle {
+        transitive = false
+    }
+}
+
+dependencies {
+    compile "com.xebialabs.deployit:udm-plugin-api:$apiVersion"
+    compile "com.xebialabs.deployit:engine-spi:$apiVersion"
+    compile "com.xebialabs.deployit:engine-api:$apiVersion"
+    compile 'org.freemarker:freemarker:2.3.19'
+
+    testCompile "org.python:jython-standalone:2.5.3"
+    testCompile "junit:junit:4.12"
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+
+    distBundle 'org.apache.httpcomponents:httpmime:4.3.1'
+}
+
+
 
