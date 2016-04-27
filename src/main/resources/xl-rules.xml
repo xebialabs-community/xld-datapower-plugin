@@ -23,7 +23,7 @@
             </jython>
         </steps>
     </rule>
-    <rule name="datapower.runScript.CREATE_MODIFY" scope="deployed">
+    <rule name="datapower.uploadFile.CLEANUP" scope="deployed">
         <conditions>
             <type>datapower.Script</type>
             <operation>CREATE</operation>
@@ -31,10 +31,25 @@
         </conditions>
         <steps>
             <jython>
-               <order>60</order>
-               <description>Run script on Data Power</description>
-               <script>datapower/runScript.py</script>
+               <order>100</order>
+               <description>Remove Artifact from Data Power</description>
+               <script>datapower/deleteFile.py</script>
             </jython>
+        </steps>
+    </rule>
+
+    <rule name="datapower.runScript.CREATE_MODIFY" scope="deployed">
+        <conditions>
+            <type>datapower.Script</type>
+            <operation>CREATE</operation>
+            <operation>MODIFY</operation>
+        </conditions>
+        <steps>
+            <os-script>
+               <order>70</order>
+               <description>Run script on Data Power</description>
+               <script>datapower/expect</script>
+            </os-script>
         </steps>
     </rule>
 

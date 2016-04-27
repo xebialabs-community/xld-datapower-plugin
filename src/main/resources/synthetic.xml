@@ -38,6 +38,7 @@
         <generate-deployable type="datapower.ScriptSpec" extends="udm.BaseDeployableFileArtifact" />
 
         <property name="fileName"   required="true" />
+        <property name="filePath"   required="true" default="temporary" hidden="true" />
    </type>
 
 </synthetic>

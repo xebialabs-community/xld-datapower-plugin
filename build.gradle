@@ -41,6 +41,7 @@ processResources {
 
 license {
     header rootProject.file('src/main/license/xebialabs_community.license')
+    exclude "**/*.ftl"
     strictCheck false
 }
 
