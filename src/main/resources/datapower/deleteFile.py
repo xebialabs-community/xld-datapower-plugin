@@ -27,10 +27,7 @@ print "URL = %s%s" % (url, uri)
 
 dpClient = datapowerClient( url, username, password )
 
-results = dpClient.uploadFile( domain, filePath, fileName, fileData )
+results = dpClient.deleteFile( domain, filePath, fileName )
 print results
 
-print "Run Script"
 
-results = dpClient.deleteFile( domain, filePath, fileName, fileData )
-print results

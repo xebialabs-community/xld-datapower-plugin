@@ -37,7 +37,7 @@ class datapowerClient( object ):
       param: fileName: the file to be stored on the datapower devide
       param: fileData: the file content to be stored on the datapower devide
       '''
-      uri = '/mgmt/filestore/%s/%s/%s' % (domain,path,fileName)
+      uri = '/mgmt/filestore/%s/%s/%s' % ( domain, path, fileName )
       fileData64 = base64.encodestring( fileData )
       payload = '''
       {
@@ -57,7 +57,7 @@ class datapowerClient( object ):
       return response['result']
    # End uploadFile
 
-   def downloadFile( self, domain, path, file ):
+   def downloadFile( self, domain, path, fileName ):
       '''
       Download a file from a Datapower device
    
@@ -66,12 +66,27 @@ class datapowerClient( object ):
       param: path: the Datapower path
       param: file: the file to be stored on the datapower devide
       '''
-
+      uri = '/mgmt/filestore/%s/%s/%s' % ( domain, path, fileName )
       r = self.request.get( uri, contentType = 'application/json' )
       response = json.loads(r.response)
       
       print response['_links']['self']['href']
       return base64.decodestring(response['file'])
    # End downloadFile
+
+   def deleteFile( self, domain, path, fileName ):
+      '''
+      Delete a file from a Datapower device
+   
+      param: domain: The domain in the Datapower device where the file will be stored
+      param: path: the Datapower path
+      param: file: the file to be stored on the datapower devide
+      '''
+      uri = '/mgmt/filestore/%s/%s/%s' % ( domain, path, fileName )
+      r = self.request.delete( uri, contentType = 'application/json' )
+      response = json.loads(r.response)
+      
+      return response['result']
+   # End deleteFile
 
 # End datapowerClient

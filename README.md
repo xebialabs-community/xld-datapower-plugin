@@ -43,4 +43,10 @@ The *datapower.FileSpec* is a deployable file to a datapower device.  The exampl
 
 ![datapower.FileSpec](images/datapower.FileSpec.png)
 
+###datapower.ScriptSpec###
+
+The *datapower.ScriptSpec* is a deployable script file that will be run on the datapower device.  By default the scipt is uploaded to the *temporary* space.  Once the script is executed the script is deleated.
+
+![datapower.ScriptSpec](images/datapower.ScriptSpec.png)
+
 
