@@ -54,6 +54,14 @@ expect {
   "*# "
 }
 
+send "save memory\r"
+
+expect {
+  timeout { send_user "\n[y/n]:"; exit 1}
+  "*# "
+}
+
+send "y\r"
 send "exit\r"
 send_user "\n"
 close

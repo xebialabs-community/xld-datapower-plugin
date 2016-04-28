@@ -1,3 +1,7 @@
+# Build status #
+
+[![Build Status](https://travis-ci.org/xebialabs-community/xlr-datapower-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-datapower-plugin)
+
 # Datapower plugin #
 This plugin allows XL Deploy to configure applications in an IBM Data Power device.
 
@@ -49,4 +53,12 @@ The *datapower.ScriptSpec* is a deployable script file that will be run on the d
 
 ![datapower.ScriptSpec](images/datapower.ScriptSpec.png)
 
+##References##
+
+* [DataPower XML Integration Appliance XI50](ftp://ftp.software.ibm.com/software/integration/datapower/library/prod_docs/4Q2008/XI-3.7.2-CommandReference.pdf)
+* [REST management interface and IBM DataPower Gateway: Part 1: Introduction to the REST management interface and status monitoring](http://www.ibm.com/developerworks/websphere/library/techarticles/1512_derbakova/1512_Derbakova_P1.html)
+* [REST management interface and IBM DataPower Gateway: Part 2: Configuration management](http://www.ibm.com/developerworks/websphere/library/techarticles/1512_derbakova/1512_Derbakova_P2.html)
+* [REST management interface and IBM DataPower Gateway: Part 3: File and directory management](http://www.ibm.com/developerworks/websphere/library/techarticles/1512_derbakova/1512_Derbakova_P3.html)
+* [REST management interface and IBM DataPower Gateway: Part 4: Triggering appliance operations](http://www.ibm.com/developerworks/websphere/library/techarticles/1512_derbakova/1512_Derbakova_P4.html)
+* 
 
