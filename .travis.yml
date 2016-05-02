@@ -8,10 +8,10 @@ notifications:
       secure: A0rtcc5iWVOiKodiYxX8DzNn777k2boUWILXtfEKKXqHzxENYaj5EHeMT+kC+2F/rnnjS79fMFD9VU4d/dbjiQH4wzHMPA5gBGpOpb+q0zbLTxt4sYmn+9HqVoIu774ZSBkX1fh5y/MM6qrjUJbPLMuBylM88PhYu95hGL7TW1w=
 deploy:
   provider: releases
-  api_key:
-    secure: HPrcS11w/itr0rnwurkNPWkQiKXwuB63Ly8xxMjuaKrAI9FXPuS2kVOXHlLHxsfKiV/OhP/jkXQJJTvADRlAnE7sawgua6nzTOoLYITtEIEKoRYxOL3ieKqk7jZW7Mm6f4EXZ98CwugzBg3cFVIh7GBICaz647xo7/YvNkqV7Go=
   file: build/libs/xld-datapower-plugin-1.0.0.jar
   skip_cleanup: true
+  api-key:
+    secure: RIg/DuVKopMrpqMoSYhuk7DHDhmCslzSa+D6sMnCBTypbYo4QVfFOa9LyTqOkbV83yVOoUwtdVrH9lPoMFcbjMX6/xiVw6bDCwGJhaT0tKjUlEOJKwRJbbJ9aHqIShYm9RfjmmwxTU5bOPpYpZtxAfkx8VmZf/7r2ES8AK9jexMKnjXDA7cEJHRN0qZulYEP/AGEPxt2vOSHxjhhUcKkVge7s9CTWeZlWIDp5WasVDc+TFw8xcjjQl86wPvla4Y6Ba5IziElPzjd8eXUDyJqIXhrvhRTyhA2ZDaoRaARWz1GmQkyJmcGID6K0q3FU9yHUt2keDlDRczgc0eVx8bMxato0S7WLQ2e2vCvhz//OwB5hOCIb729wrvAe4Mhi6lGp+iejrZP4Q5Z+Gj+xyfGnU9rKLrHHZTUPxq+g/5XroYGDeE3jIp/Cvz+jWTl7fjBG4lb+PAbdfq6ySNCzObgmpUoWmRoA8qJPoqvIIeXbtIpU4XFHgV13xUpr8szElI2yOa6PlXdybBcj/gMAb01xaXlKrn8OYMZACuPfY3diOvM+lz1wax0xlr7E0wxcAjlzz2AXDdaEptltN+bqbyNQ4VQ8KFy1KsceyHM2I9RFZQ5KiUcWZDnnGOVldEfw9JaHHPkczBfrAokBAGMxco9tj3WIKJgiL8rhOZPh3+XSq4=
   on:
     all_branches: true
     tags: true
