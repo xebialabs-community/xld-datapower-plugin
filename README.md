@@ -11,7 +11,7 @@ This plugin allows XL Deploy to configure applications in an IBM Data Power devi
 # Requirements #
 
 ##Contifuring DataPower##
-The DataPower devices needs to have a firmware version greater that 7.0.0 and the correct management interfaces enabled.  To work with this plugin the REST Management interface needs to be enabled as follows:
+The DataPower devices needs to have a firmware version greater that 7.2.0 and the correct management interfaces enabled.  To work with this plugin the REST Management interface needs to be enabled as follows:
 
 ![DP_Configure_REST_Management_Interface](images/DP_Configure_REST_Management_Interface.png)
 
