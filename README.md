@@ -1,4 +1,7 @@
-# Build status #
+# Build status DEPRICATED#
+
+This plugin has been insource by XebiaLabs.  The documentation for the new plugin is as follows:
+* [Introduction to the XL Deploy DataPower plugin](https://docs.xebialabs.com/xl-deploy/concept/datapower-plugin.html)
 
 [![Build Status](https://travis-ci.org/xebialabs-community/xld-datapower-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xld-datapower-plugin)
 
