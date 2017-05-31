@@ -24,11 +24,7 @@ repositories {
     mavenCentral()
     maven { url 'http://mvnrepository.com/artifact' }
     maven {
-        credentials {
-            username 'community-plugins'
-            password 'community'
-        }
-        url 'http://nexus.xebialabs.com/nexus/content/repositories/releases'
+        url 'https://dist.xebialabs.com/public/maven2'
     }
 }
 
