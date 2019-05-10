@@ -2,10 +2,7 @@ language: java
 sudo: false
 notifications:
   slack:
-    secure: WzdS5sSSQziwbZwqW8nCddRGC8SSrgcPyVn9NbV2MOkqa4mFawQOL05CCOc0RfV7otCCqxsDqXAehuyKzEVA8VrQ1g10Eelppbnv9WxDYzIj1M2MPmyo4RzHK6+aw0KRIujufgYQdxit+N/J2xATnUy+3hiXBQprCnIGXYaNk2w=
-  hipchat:
-    rooms:
-      secure: A0rtcc5iWVOiKodiYxX8DzNn777k2boUWILXtfEKKXqHzxENYaj5EHeMT+kC+2F/rnnjS79fMFD9VU4d/dbjiQH4wzHMPA5gBGpOpb+q0zbLTxt4sYmn+9HqVoIu774ZSBkX1fh5y/MM6qrjUJbPLMuBylM88PhYu95hGL7TW1w=
+    secure: Hu0siOhwRdFq+nfCOmO94em1tljlglSmso1rFTPYPr02In2j98F9VoMxw17gREY+2A+eya40lHSdgOltGV+aMxZgG4Jj1U85ExOAbmSDDiW9xGwtgVN/ysPIyyh9HTVHP9u6Y8GdDiqqYwQfQsFkRFIMPqEG66ALgNVGpHdHfiDgHQ5DYmktcHGFm+EULiUrf5trBy6wyIa5gDSJfVHTlHTa02V+mJjZeHGGB7bZfx94vRFgKDKWDvwkdI3dfbkE3Agj0YgeMn8JQfQbpUpJqeGCPXp9qahEiH9FmSF4CFoefY+w91r1qr+ZN1ZVHw3/sVK0CBW0PWT8RuZ/BCvxrpY2cpnDy8BnY65HTufuehEKH/jHtODZOQassRxNRy2TZbuddmBmyNo+DmZvMSSVm99svtXX5/tDPZjoJUZpbCnMbmi0ya8FE8dLaiGhvQglZbdJnqfN+7ml/7nlkQ6L+AVgEVCVxK5dd6RZE/OC80xrilyv/vXWmqaTRwzA7DU/NQoFJEI5pJUImrT/pAbAJCvfGA9FzeAEdtYwf/zpIMUBqYro7L8b4UZPe9MkeKemk9Gz4KwNDFnVQnu9fllEmz2CbTN/r9eGo2GXMPQV9C8XnS95kcN3HYi7Ws6SbScI8TDu0D3Loism2BCdT9MGfeaio13NhoIAPoUKH8ww/IQ=
 deploy:
   provider: releases
   file: build/libs/xld-datapower-plugin-1.0.0.jar
